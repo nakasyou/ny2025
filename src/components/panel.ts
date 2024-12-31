@@ -65,10 +65,7 @@ export const createReducePanel = (reducePoint: number) => {
 
   const { texture, aspect } = createTextTexture(`${reducePoint}`, 100, 'black')
   const textGeometry = new PlaneGeometry(aspect, 1)
-  const textMaterial = new MeshBasicMaterial({
-    map: texture,
-    transparent: true
-  })
+  const textMaterial = new MeshBasicMaterial({ map: texture, transparent: true })
   const textMesh = new Mesh(textGeometry, textMaterial)
   textMesh.position.y = 1
 

@@ -9,12 +9,14 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@types/canvas-confetti": "^1.9.0",
     "@types/mathjax": "^0.0.40",
     "@types/three": "^0.171.0",
     "typescript": "~5.6.2",
     "vite": "^6.0.5"
   },
   "dependencies": {
+    "canvas-confetti": "^1.9.3",
     "mathjax": "^3.2.2",
     "three": "^0.171.0"
   }
