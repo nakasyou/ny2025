@@ -4,10 +4,14 @@ const gameoverContainer = document.getElementById('gameover-container') as HTMLD
 const messageElem = document.getElementById('message') as HTMLDivElement
 const messageContainerElem = document.getElementById('message-container') as HTMLDivElement
 
+let lastQ = ''
 export const setQuestion = (question: string) => {
-  mathQuestionElem.innerHTML = `${question}`
-  // @ts-ignore
-  MathJax.typeset([mathQuestionElem])
+  if (lastQ !== question) {
+    mathQuestionElem.innerHTML = `${question}`
+    // @ts-ignore
+    MathJax.typeset([mathQuestionElem])
+  }
+  lastQ = question
 }
 export const setSnakeLength = (l: number | string) => {
   snakeLengthElem.textContent = l.toString()
