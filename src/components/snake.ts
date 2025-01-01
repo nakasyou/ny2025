@@ -18,7 +18,7 @@ export const createSnake = () => {
   return {
     snake: group,
     updateSnake(length: number) {
-      const neededSpheres = Math.max(5, Math.ceil(length / 5))
+      const neededSpheres = Math.max(10, Math.ceil(length / 5))
       if (neededSpheres > group.children.length) {
         // Need to create
         for (let i = 0; i = neededSpheres - group.children.length; i++) {
@@ -33,7 +33,7 @@ export const createSnake = () => {
           group.remove(group.children[0])
         }
       }
-      const zLen = neededSpheres > 20 ? 0.02 * 20 : 0.02 * neededSpheres
+      const zLen = neededSpheres > 50 ? 0.02 * 50 : 0.02 * neededSpheres
       const width = neededSpheres > 20 ? 0.5 : 0.02 * neededSpheres
       const baseX = -Math.cos(degToRad(frame)) * width / 2
       for (let i = 0; i < group.children.length; i++) {
