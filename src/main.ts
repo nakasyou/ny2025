@@ -124,11 +124,11 @@ function step() {
         } else {
           snakeLength += nextPanel.reducePoint
         }
-      }
-      if (nextPanel.type === 'quiz') {
-        setQuestion(nextPanel.quiz.questionMathJax ?? '')
-      } else {
-        setQuestion('')
+        if (nextPanel.type === 'quiz') {
+          setQuestion(nextPanel.quiz.questionMathJax ?? '')
+        } else {
+          setQuestion('')
+        }
       }
     } else if (dragon.position.z >= snake.position.z) {
       isGameCleared = true
