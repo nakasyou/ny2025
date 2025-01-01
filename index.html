@@ -15,7 +15,7 @@
       <div style="text-align: center; font-size: 2rem;">ゲームオーバー</div>
       <div>蛇の長さが0または負の数になってしまったため、2025年の十二支の座を辰から奪えませんでした...</div>
       <button id="retry" onclick="location.reload()">もう一度</button>
-      <button id="retry" onclick="const u=new globalThis.URL(location.href);u.searchParams.set('force');location.href=u.href">強制的にクリアする</button>
+      <button id="retry" onclick="const u=new globalThis.URL(location.href);u.searchParams.set('force', 'a');location.href=u.href">強制的にクリアする</button>
     </div>
     <div id="cover">
       <img src="/cover.jpeg" style="width:100%; height:100dvh; object-fit: contain;" />
