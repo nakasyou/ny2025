@@ -103,7 +103,7 @@ dragon.position.setY(2)
 dragon.position.setZ(-((QUIZZES.length + 1) * QUIZ_BETWEEN))
 scene.add(dragon)
 
-let isGameCleared = false
+let isGameCleared = new URL(location.href).searchParams.has('force')
 let isGameOvered = false
 let snakeLength = INITIAL_SNAKE_LENGTH
 let nextPanelIndex = 0
