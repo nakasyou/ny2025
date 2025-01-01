@@ -14,6 +14,7 @@ await new Promise(r => {
     r(null)
     cover.remove()
   }
+  new URL(location.href).searchParams.has('force') && cover.click()
 })
 
 // シーンの作成
